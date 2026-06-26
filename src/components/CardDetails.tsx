@@ -1,4 +1,5 @@
 import { encryptData } from "../configs";
+import { useState } from "react";
 
 const CardDetails = ({ 
     cardType: type, 
@@ -6,15 +7,14 @@ const CardDetails = ({
     cardholderName: name, 
     expirationDate: exp, 
     uiTheme: ui,
-    isPrivacyMode = false,
-    togglePrivacy,
 }) => {
+    const [isPrivacyMode, togglePrivacyMode] = useState(false);
     const {backgroundGradient: bg, textColor} = ui;    
     return (
         <button 
             className="cardContainer" 
             style={{backgroundImage: bg, color: textColor}}
-            onClick={togglePrivacy}
+            onClick={() => togglePrivacyMode(mode => !mode)}
         >
             <div className="cardNumber">{isPrivacyMode ? encryptData(number) : number}</div>
             <div className="name">{isPrivacyMode ? encryptData(name) : name}</div>

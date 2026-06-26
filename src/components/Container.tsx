@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { useFetch } from '../hooks/useFetch';
 import { BASE_ENDPOINT } from '../configs';
 import CardDetails from './CardDetails';
@@ -10,14 +10,9 @@ enum Direction {
 
 const Container = () => {
     const [activeId, setActiveId] = useState("cc-001");
-    const [privacyMode, togglePrivacyMode] = useState(false);
 
     const [cardList, error, loading] = useFetch(`${BASE_ENDPOINT}/cards`);
     const activeCard = cardList?.find(card => card.id === activeId);
-
-    useEffect(() => {
-        togglePrivacyMode(false);
-    }, [activeId])
 
     const rotateCard = (dir: Direction) => {
         if (!cardList.length) return;
@@ -37,11 +32,8 @@ const Container = () => {
     if (loading) return <p>Loading...</p>
     return (
         <div className='container'>
-            {activeCard && <CardDetails 
-                isPrivacyMode={privacyMode}
-                togglePrivacy={() => togglePrivacyMode(isPrivacy => !isPrivacy)}
-                {...activeCard}
-            />}
+            { /* set key here to tell React to re-render a new card instead of using stale data from last card */}
+            {activeCard && <CardDetails key={activeCard.id} {...activeCard} />}
             <div className='buttons'>
                 <button onClick={() => rotateCard(Direction.PREV)}>Previous</button>
                 <button onClick={() => rotateCard(Direction.NEXT)}>Next</button>
