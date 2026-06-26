@@ -1,46 +1,49 @@
-[
-    {
-      "id": "cc-001",
-      "cardType": "visa",
-      "cardNumber": "4111 2222 3333 4444",
-      "cardholderName": "ALEXANDER MERCER",
-      "expirationDate": "12/28",
-      "uiTheme": {
-        "backgroundGradient": "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
-        "textColor": "#ffffff"
-      }
-    },
-    {
-      "id": "cc-002",
-      "cardType": "mastercard",
-      "cardNumber": "5500 1234 5678 9012",
-      "cardholderName": "ZOE LIN",
-      "expirationDate": "04/29",
-      "uiTheme": {
-        "backgroundGradient": "linear-gradient(135deg, #232526 0%, #414345 100%)",
-        "textColor": "#ffffff"
-      }
-    },
-    {
-      "id": "cc-003",
-      "cardType": "amex",
-      "cardNumber": "3782 822463 10005",
-      "cardholderName": "DR JEAN-PIERRE DUPONT",
-      "expirationDate": "09/27",
-      "uiTheme": {
-        "backgroundGradient": "linear-gradient(135deg, #0575e6 0%, #00f260 100%)",
-        "textColor": "#ffffff"
-      }
-    },
-    {
-      "id": "cc-004",
-      "cardType": "discover",
-      "cardNumber": "6011 0000 1111 2222",
-      "cardholderName": "SARAH SMITH-JONES",
-      "expirationDate": "06/30",
-      "uiTheme": {
-        "backgroundGradient": "linear-gradient(135deg, #ff8c00 0%, #e52d27 100%)",
-        "textColor": "#ffffff"
-      }
-    }
-  ]
+{
+    "cards": [
+        {
+          "id": "cc-001",
+          "cardType": "visa",
+          "cardNumber": "4111 2222 3333 4444",
+          "cardholderName": "ALEXANDER MERCER",
+          "expirationDate": "12/28",
+          "uiTheme": {
+            "backgroundGradient": "linear-gradient(135deg, #1e3c72 0%, #2a5298 100%)",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "id": "cc-002",
+          "cardType": "mastercard",
+          "cardNumber": "5500 1234 5678 9012",
+          "cardholderName": "ZOE LIN",
+          "expirationDate": "04/29",
+          "uiTheme": {
+            "backgroundGradient": "linear-gradient(135deg, #232526 0%, #414345 100%)",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "id": "cc-003",
+          "cardType": "amex",
+          "cardNumber": "3782 822463 10005",
+          "cardholderName": "DR JEAN-PIERRE DUPONT",
+          "expirationDate": "09/27",
+          "uiTheme": {
+            "backgroundGradient": "linear-gradient(135deg, #0575e6 0%, #00f260 100%)",
+            "textColor": "#ffffff"
+          }
+        },
+        {
+          "id": "cc-004",
+          "cardType": "discover",
+          "cardNumber": "6011 0000 1111 2222",
+          "cardholderName": "SARAH SMITH-JONES",
+          "expirationDate": "06/30",
+          "uiTheme": {
+            "backgroundGradient": "linear-gradient(135deg, #ff8c00 0%, #e52d27 100%)",
+            "textColor": "#ffffff"
+          }
+        }
+      ]
+}
+
