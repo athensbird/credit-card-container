@@ -55,7 +55,7 @@ const Container = () => {
             { /* set key here to tell React to re-render a new card instead of using stale data from last card */}
             {activeCard && <CardDetails key={activeCard.id} {...activeCard} />}
             <div className='buttons'>
-                <button aria-label='prev card' onClick={() => rotateCard(Direction.PREV)}>Previous</button>
+                <button tabIndex={0} aria-label='prev card' onClick={() => rotateCard(Direction.PREV)}>Previous</button>
                 <button aria-label='next card' onClick={() => rotateCard(Direction.NEXT)}>Next</button>
             </div>
         </div>

@@ -2,7 +2,7 @@
 /* Card frame styling*/
 
 .cardContainer {
-    margin-top: 3rem;;
+    margin-top: 1rem;;
     width: 420px;
     height: 250px;
     display: grid;
@@ -49,7 +49,7 @@
 /* Prev/Next button group styling*/
 
 .buttons {
-    width: 300px;
+    width: 400px;
     display: flex;
     justify-content: center;
     gap: 1rem;
