@@ -14,6 +14,8 @@
     box-shadow: 2px 6px 20px 6px gray;
     opacity: 60%;
     text-transform: capitalize;
+    border: none;
+    cursor: pointer;
 }
 
 .cardNumber {
@@ -28,6 +30,7 @@
     display: flex;
     margin-left: 1rem;
     text-wrap: wrap;
+    font-weight: bold;
 }
 
 .cardType {

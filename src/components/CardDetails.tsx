@@ -1,17 +1,25 @@
+import { encryptData } from "../configs";
+
 const CardDetails = ({ 
     cardType: type, 
     cardNumber: number, 
     cardholderName: name, 
     expirationDate: exp, 
     uiTheme: ui,
+    isPrivacyMode = false,
+    togglePrivacy,
 }) => {
-    const {backgroundGradient: bg, textColor} = ui;
+    const {backgroundGradient: bg, textColor} = ui;    
     return (
-        <div className="cardContainer" style={{backgroundImage: bg, color: textColor}}>
-            <div className="cardNumber">{number}</div>
-            <div className="name">{name}</div>
+        <button 
+            className="cardContainer" 
+            style={{backgroundImage: bg, color: textColor}}
+            onClick={togglePrivacy}
+        >
+            <div className="cardNumber">{isPrivacyMode ? encryptData(number) : number}</div>
+            <div className="name">{isPrivacyMode ? encryptData(name) : name}</div>
             <div className="cardType">{type}</div>
-        </div>
+        </button>
     )
 }
 
