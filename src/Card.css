@@ -28,13 +28,21 @@
 .name {
     grid-area: name;
     display: flex;
+    align-items: center;
     margin-left: 1rem;
     text-wrap: wrap;
-    font-weight: bold;
+    font-weight: bold;;
 }
 
 .cardType {
     grid-area: cardType;
+    display: flex;
+    justify-content: end;
+}
+
+.icon {
+    height: 35px;
+    text-align: right;
 }
 
 
