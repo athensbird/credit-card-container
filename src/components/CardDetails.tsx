@@ -5,11 +5,12 @@ const CardDetails = ({
     expirationDate: exp, 
     uiTheme: ui,
 }) => {
+    const {backgroundGradient: bg, textColor} = ui;
     return (
-        <div className="cardContainer">
-            <div>{number}</div>
-            <div>{name}</div>
-            <div>{exp}</div>
+        <div className="cardContainer" style={{backgroundImage: bg, color: textColor}}>
+            <div className="cardNumber">{number}</div>
+            <div className="name">{name}</div>
+            <div className="cardType">{type}</div>
         </div>
     )
 }

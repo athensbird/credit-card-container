@@ -1,3 +1,42 @@
+
+/* Card frame styling*/
+
+.cardContainer {
+    margin-top: 3rem;;
+    width: 420px;
+    height: 250px;
+    display: grid;
+    grid-template-areas: 'main main main'
+    'cardNumber cardNumber cardNumber'
+    'name name cardType';
+    grid-template-columns: repeat(3, 140px);
+    grid-template-rows: 1fr 50px 40px;
+    box-shadow: 2px 6px 20px 6px gray;
+    opacity: 60%;
+    text-transform: capitalize;
+}
+
+.cardNumber {
+    grid-area: cardNumber;
+    text-align: left;
+    margin-left: 1rem;
+    font-size: 30px;
+}
+
+.name {
+    grid-area: name;
+    display: flex;
+    margin-left: 1rem;
+    text-wrap: wrap;
+}
+
+.cardType {
+    grid-area: cardType;
+}
+
+
+/* Prev/Next button group styling*/
+
 .buttons {
     width: 300px;
     display: flex;
